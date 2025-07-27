@@ -2,11 +2,19 @@ import { createStaticNavigation, StaticParamList } from '@react-navigation/nativ
 import { createStackNavigator } from '@react-navigation/stack';
 import Modal from '../screens/modal';
 import DrawerNavigator from './drawer-navigator';
+import Tab from './tab-navigator';
+import Login from 'screens/Login/Index';
 
 const Stack = createStackNavigator({
   screens: {
-    DrawerNavigator: {
-      screen: DrawerNavigator,
+     Login: {
+      screen: Login,
+      options: {
+        headerShown: false,
+      },
+    },
+    Tab: {
+      screen: Tab,
       options: {
         headerShown: false,
       },
